@@ -1,0 +1,411 @@
+
+/* BASIC SETTINGS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f8f9fc;
+    color: #333;
+    line-height: 1.7;
+}
+
+section {
+    scroll-margin-top: 80px;
+}
+
+/* HEADER */
+
+header {
+    background: #172033;
+    color: white;
+    padding: 18px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #00c9a7;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    margin-left: 25px;
+    font-size: 15px;
+}
+
+nav a:hover {
+    color: #00c9a7;
+}
+
+/* HERO SECTION */
+
+.hero {
+    min-height: 500px;
+    background:
+        linear-gradient(rgba(10,20,40,.75),
+        rgba(10,20,40,.75)),
+        url("https://picsum.photos/1600/800?random=30");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+    padding: 60px 10%;
+    color: white;
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.tagline {
+    color: #00c9a7;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+
+.hero h1 {
+    font-size: 48px;
+    line-height: 1.2;
+    margin: 20px 0;
+}
+
+.hero p {
+    font-size: 17px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    background: #00c9a7;
+    color: #172033;
+    text-decoration: none;
+    padding: 12px 28px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background: white;
+}
+
+/* INTRODUCTION */
+
+.intro {
+    text-align: center;
+    padding: 75px 15%;
+    background: white;
+}
+
+.intro h2,
+.categories h2,
+.blogs h2,
+.about h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #172033;
+}
+
+.intro p {
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+/* CATEGORIES */
+
+.categories {
+    padding: 75px 8%;
+    text-align: center;
+    background: #eef3f8;
+}
+
+.section-desc {
+    color: #777;
+    margin-bottom: 35px;
+}
+
+.category-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.category {
+    background: white;
+    padding: 30px 20px;
+    width: 230px;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgba(0,0,0,.08);
+    transition: .3s;
+}
+
+.category:hover {
+    transform: translateY(-8px);
+}
+
+.category h3 {
+    color: #00a98d;
+    margin-bottom: 10px;
+}
+
+/* BLOG POSTS */
+
+.blogs {
+    padding: 75px 8%;
+    text-align: center;
+}
+
+.blog-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.post {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: left;
+    box-shadow: 0 4px 15px rgba(0,0,0,.08);
+    transition: .3s;
+}
+
+.post:hover {
+    transform: translateY(-7px);
+}
+
+.post img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.post-content {
+    padding: 25px;
+}
+
+.post-content span,
+.featured-content span {
+    color: #00a98d;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.post h3 {
+    font-size: 20px;
+    margin: 12px 0;
+    color: #172033;
+}
+
+.post p {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.post a {
+    color: #00a98d;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* FEATURED ARTICLE */
+
+.featured {
+    background: #172033;
+    color: white;
+    padding: 80px 10%;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.featured-image,
+.featured-content {
+    flex: 1;
+}
+
+.featured-image img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.featured-content h2 {
+    font-size: 32px;
+    margin: 15px 0;
+}
+
+.featured-content p {
+    margin-bottom: 20px;
+    color: #ddd;
+}
+
+/* ABOUT SECTION */
+
+.about {
+    background: white;
+    text-align: center;
+    padding: 80px 15%;
+}
+
+.about p {
+    margin-bottom: 20px;
+    color: #555;
+}
+
+/* NEWSLETTER */
+
+.newsletter {
+    background: #00c9a7;
+    padding: 70px 15px;
+    text-align: center;
+    color: #172033;
+}
+
+.newsletter h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.newsletter p {
+    margin-bottom: 25px;
+}
+
+.newsletter input {
+    width: 300px;
+    padding: 14px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+}
+
+.newsletter button {
+    padding: 14px 25px;
+    background: #172033;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.newsletter button:hover {
+    background: #333;
+}
+
+/* FOOTER */
+
+footer {
+    background: #172033;
+    color: white;
+    text-align: center;
+    padding: 45px 15px 20px;
+}
+
+footer h2 {
+    color: #00c9a7;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.footer-links {
+    margin: 25px 0;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: white;
+    margin: 0 15px;
+}
+
+.footer-links a:hover {
+    color: #00c9a7;
+}
+
+footer hr {
+    border: 0;
+    border-top: 1px solid #444;
+    margin: 20px 0;
+}
+
+.copyright {
+    color: #aaa;
+    font-size: 13px;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 900px) {
+
+    .blog-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .featured {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 600px) {
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    nav a {
+        margin: 0;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .blog-container {
+        grid-template-columns: 1fr;
+    }
+
+    .intro,
+    .about {
+        padding: 50px 8%;
+    }
+
+    .newsletter input {
+        width: 100%;
+        margin-bottom: 12px;
+    }
+
+    .newsletter button {
+        width: 100%;
+    }
+
+    .footer-links a {
+        display: inline-block;
+        margin: 8px;
+    }
+}
